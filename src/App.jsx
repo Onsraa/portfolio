@@ -39,21 +39,28 @@ const experiences = [{
 }];
 
 const projects = [{
-    id: '001',
+    id: '004',
     title: 'Robozzle',
     description: 'Reproduction du jeu Robozzle créé par Igor Ostrovsky sous forme d\'un test technique.',
     tech: ['Rust', 'Bevy'],
     year: '2025',
     link: 'https://github.com/Onsraa/robozzle'
 }, {
-    id: '002',
+    id: '003',
     title: 'Particle Life Simulator',
     description: 'Simulateur de particules de vie en 3D avec pour objectif de déterminer la meilleure population qui pourrait survivre dans un environnement.',
     tech: ['Rust', 'Bevy', 'Algorithme génétique'],
     year: '2025',
     link: 'https://github.com/Onsraa/particle-life'
 }, {
-    id: '003',
+    id: '002',
+    title: 'Harmonies with WFC',
+    description: 'Projet inspiré du jeu de société harmonies. Génération procédurale de terrain avec un algorithme Wave Function Collapse.',
+    tech: ['Rust', 'Bevy', 'Wave Function Collapse algorithm'],
+    year: '2025',
+    link: 'https://github.com/Onsraa/harmonies-wfc'
+}, {
+    id: '001',
     title: 'Machine Learning',
     description: 'Ce projet a été développé dans le cadre du cours "Machine Learning" et permet de tester différents algorithmes d\'apprentissage sur des cas d\'études simples ainsi que sur des tâches de classification d\'images.',
     tech: ['Rust', 'Bevy'],
