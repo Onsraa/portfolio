@@ -1,0 +1,81 @@
+{
+  "config": {
+    "name": "Teddy Truong",
+    "title": "Développeur Rust",
+    "description": "Grimpeur, joueur, développeur. J'essaye encore de comprendre comment marche les lifetimes en Rust.",
+    "links": {
+      "github": "https://github.com/Onsraa",
+      "linkedin": "https://linkedin.com/in/teddy-truong",
+      "email": "mailto:teddytruong@protonmail.com",
+      "cv": "cv.pdf"
+    }
+  },
+  "experiences": [
+    {
+      "period": "2025 — présent",
+      "company": "UQAC",
+      "role": "Développeur Unity",
+      "description": "Développement du jeu sérieux Cogni-Actif qui a pour but de simplifier l'intégration d'activité physique en milieu scolaire. Les missions sont tenues secretes pour l'instant !",
+      "tech": ["C#", "Unity"],
+      "current": true,
+      "internship": false
+    },
+    {
+      "period": "2023 — 2025",
+      "company": "SNCF Réseau",
+      "role": "Apprenti Ingénieur Logiciel",
+      "description": "Développement d'outils afin d'accélérer la productivité des ingénieurs AutoCAD/BricsCAD. Mise en place d'outils d'analyses permettant d'optimiser les dépenses. Création de bibliothèques graphiques en AutoLisp.",
+      "tech": ["C#", "VB (.NET)", "Lisp (AutoLisp)", "AutoCAD", "BricsCAD", "Python", "M (Power Query)", "DAX", "Power Automate"],
+      "current": false,
+      "internship": true
+    },
+    {
+      "period": "2022 — 2023",
+      "company": "Numérique Gagnant",
+      "role": "Apprenti Développeur",
+      "description": "Développement d'applications et d'outils pour améliorer la productivité des entreprises collaboratrices.",
+      "tech": ["PHP", "NodeJS", "MySQL", "Powershell", "VBA", "Windev28", "Power Automate"],
+      "current": false,
+      "internship": true
+    }
+  ],
+  "projects": [
+    {
+      "id": "004",
+      "title": "Robozzle",
+      "description": "Reproduction du jeu Robozzle créé par Igor Ostrovsky sous forme d'un test technique.",
+      "tech": ["Rust", "Bevy"],
+      "year": "2025",
+      "link": "https://github.com/Onsraa/robozzle"
+    },
+    {
+      "id": "003",
+      "title": "Particle Life Simulator",
+      "description": "Simulateur de particules de vie en 3D avec pour objectif de déterminer la meilleure population qui pourrait survivre dans un environnement.",
+      "tech": ["Rust", "Bevy", "Algorithme génétique"],
+      "year": "2025",
+      "link": "https://github.com/Onsraa/particle-life"
+    },
+    {
+      "id": "002",
+      "title": "Harmonies with WFC",
+      "description": "Projet inspiré du jeu de société harmonies. Génération procédurale de terrain avec un algorithme Wave Function Collapse.",
+      "tech": ["Rust", "Bevy", "Wave Function Collapse algorithm"],
+      "year": "2025",
+      "link": "https://github.com/Onsraa/harmonies-wfc"
+    },
+    {
+      "id": "001",
+      "title": "Machine Learning",
+      "description": "Ce projet a été développé dans le cadre du cours \"Machine Learning\" et permet de tester différents algorithmes d'apprentissage sur des cas d'études simples ainsi que sur des tâches de classification d'images.",
+      "tech": ["Rust", "Bevy"],
+      "year": "2025",
+      "link": "https://github.com/Onsraa/machine-learning"
+    }
+  ],
+  "skills": {
+    "langages": ["Rust", "C++", "C#"],
+    "crates": ["bevy", "tokio", "thiserror"],
+    "softwares": ["Unity", "AutoCAD", "BricsCAD"]
+  }
+}
