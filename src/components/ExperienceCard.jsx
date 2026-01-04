@@ -27,18 +27,20 @@ function ExperienceCard({ experience, isLast }) {
                         {experience.role}
                     </h3>
                     <span className="text-dark">@</span>
-                    <span className={`experience-company-name ${experience.current ? 'current' : ''}`}>
+                    <span className={`experience-company-name ${experience.internship || experience.apprenticeship ? 'current' : ''}`}>
                         {experience.company}
-                        {experience.current && (
-                            <span className="experience-tag now">
-                                NOW
-                            </span>
-                        )}
+                        {experience.current && (<span className="experience-tag now">NOW</span>)}
                     </span>
-                    <span className={`experience-company-name ${experience.internship ? 'current' : ''}`}>
+
+                    <span className={`experience-company-name`}>
                         {experience.internship && (
                             <span className="experience-tag internship">
                                 INTERNSHIP
+                            </span>
+                        )}
+                        {experience.apprenticeship && (
+                            <span className="experience-tag apprenticeship">
+                                APPRENTICESHIP
                             </span>
                         )}
                     </span>

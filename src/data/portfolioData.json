@@ -18,7 +18,8 @@
       "description": "Développement du jeu sérieux Cogni-Actif qui a pour but de simplifier l'intégration d'activité physique en milieu scolaire. Les missions sont tenues secretes pour l'instant !",
       "tech": ["C#", "Unity"],
       "current": true,
-      "internship": false
+      "internship": false,
+      "apprenticeship": false
     },
     {
       "period": "2023 — 2025",
@@ -27,7 +28,8 @@
       "description": "Développement d'outils afin d'accélérer la productivité des ingénieurs AutoCAD/BricsCAD. Mise en place d'outils d'analyses permettant d'optimiser les dépenses. Création de bibliothèques graphiques en AutoLisp.",
       "tech": ["C#", "VB (.NET)", "Lisp (AutoLisp)", "AutoCAD", "BricsCAD", "Python", "M (Power Query)", "DAX", "Power Automate"],
       "current": false,
-      "internship": true
+      "internship": false,
+      "apprenticeship": true
     },
     {
       "period": "2022 — 2023",
@@ -36,7 +38,8 @@
       "description": "Développement d'applications et d'outils pour améliorer la productivité des entreprises collaboratrices.",
       "tech": ["PHP", "NodeJS", "MySQL", "Powershell", "VBA", "Windev28", "Power Automate"],
       "current": false,
-      "internship": true
+      "internship": false,
+      "apprenticeship": true
     }
   ],
   "projects": [

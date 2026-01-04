@@ -12,7 +12,8 @@
     --color-text-detail: #777;
     --color-border: #1a1a1a;
     --color-border-darker: #222;
-    --color-internship-bg: #3858c9;
+    --color-internship-bg: #5d7ce6;
+    --color-apprenticeship-bg: #3858c9;
     --font-mono: "IBM Plex Mono", "SF Mono", "Fira Code", monospace;
 }
 
@@ -230,6 +231,11 @@
 .experience-tag.internship {
     color: #f7f7f7;
     background: var(--color-internship-bg);
+}
+
+.experience-tag.apprenticeship {
+    color: #f7f7f7;
+    background: var(--color-apprenticeship-bg);
 }
 
 .experience-description {
