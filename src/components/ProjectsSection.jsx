@@ -15,7 +15,7 @@ function ProjectsSection({ loaded }) {
             }}
         >
             <SectionHeader
-                title="Projets"
+                title="Projects"
                 count={`${projects.length} entries`}
             />
 

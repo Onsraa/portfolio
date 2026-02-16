@@ -54,7 +54,7 @@ export default function App() {
             </header>
 
             <nav className="nav">
-                {['experience', 'projets'].map((section) => (
+                {['experience', 'projects'].map((section) => (
                     <button
                         key={section}
                         onClick={() => setActiveSection(section)}
@@ -67,7 +67,7 @@ export default function App() {
 
             <main className="main-content">
                 {activeSection === 'experience' && <ExperienceSection loaded={loaded} />}
-                {activeSection === 'projets' && <ProjectsSection loaded={loaded} />}
+                {activeSection === 'projects' && <ProjectsSection loaded={loaded} />}
             </main>
 
             <footer className="footer">
@@ -75,7 +75,7 @@ export default function App() {
                     © {new Date().getFullYear()} · {config.name}
                 </span>
                 <span className="footer-text text-extra-dark">
-                    <span className="text-dark">last login:</span> {new Date().toLocaleDateString('fr-FR')}
+                    <span className="text-dark">last login:</span> {new Date().toLocaleDateString('en-US')}
                 </span>
             </footer>
         </div>

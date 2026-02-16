@@ -17,8 +17,8 @@ function ExperienceSection({ loaded }) {
             }}
         >
             <SectionHeader
-                title="Expérience"
-                count={`${experiences.length} postes · ${yearsOfExperience} ans`}
+                title="Experience"
+                count={`${experiences.length} positions · ${yearsOfExperience} years`}
             />
 
             <div style={{ marginTop: '8px' }}>
@@ -39,7 +39,7 @@ function ExperienceSection({ loaded }) {
                 <div className="skills-grid">
                     <div>
                         <div className="skill-category-title uppercase">
-                            Langages
+                            Languages
                         </div>
                         <div className="skill-list">
                             {skills.langages.join(', ')}

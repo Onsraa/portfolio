@@ -1,8 +1,8 @@
 {
   "config": {
     "name": "Teddy Truong",
-    "title": "Développeur Rust",
-    "description": "Grimpeur, joueur, développeur. J'essaye encore de comprendre comment marche les lifetimes en Rust.",
+    "title": "Rust Developer",
+    "description": "Climber, gamer, developer. Still trying to figure out how lifetimes work in Rust.",
     "links": {
       "github": "https://github.com/Onsraa",
       "linkedin": "https://linkedin.com/in/teddy-truong",
@@ -12,10 +12,10 @@
   },
   "experiences": [
     {
-      "period": "2025 — présent",
+      "period": "2025 — present",
       "company": "UQAC",
-      "role": "Développeur Unity",
-      "description": "Développement du jeu sérieux Cogni-Actif qui a pour but de simplifier l'intégration d'activité physique en milieu scolaire. Les missions sont tenues secretes pour l'instant !",
+      "role": "Unity Developer",
+      "description": "Development of the serious game Cogni-Actif, aimed at simplifying the integration of physical activity in schools. Missions are kept secret for now!",
       "tech": ["C#", "Unity"],
       "current": true,
       "internship": false,
@@ -24,8 +24,8 @@
     {
       "period": "2023 — 2025",
       "company": "SNCF Réseau",
-      "role": "Apprenti Ingénieur Logiciel",
-      "description": "Développement d'outils afin d'accélérer la productivité des ingénieurs AutoCAD/BricsCAD. Mise en place d'outils d'analyses permettant d'optimiser les dépenses. Création de bibliothèques graphiques en AutoLisp.",
+      "role": "Software Engineer & Data Scientist",
+      "description": "Development of tools to accelerate the productivity of AutoCAD/BricsCAD engineers. Implementation of analysis tools to optimize spending. Creation of graphic libraries in AutoLisp.",
       "tech": ["C#", "VB (.NET)", "Lisp (AutoLisp)", "AutoCAD", "BricsCAD", "Python", "M (Power Query)", "DAX", "Power Automate"],
       "current": false,
       "internship": false,
@@ -34,8 +34,8 @@
     {
       "period": "2022 — 2023",
       "company": "Numérique Gagnant",
-      "role": "Apprenti Développeur",
-      "description": "Développement d'applications et d'outils pour améliorer la productivité des entreprises collaboratrices.",
+      "role": "Developer",
+      "description": "Development of applications and tools to improve the productivity of partner companies.",
       "tech": ["PHP", "NodeJS", "MySQL", "Powershell", "VBA", "Windev28", "Power Automate"],
       "current": false,
       "internship": false,
@@ -46,7 +46,7 @@
     {
       "id": "004",
       "title": "Robozzle",
-      "description": "Reproduction du jeu Robozzle créé par Igor Ostrovsky sous forme d'un test technique.",
+      "description": "Reproduction of the Robozzle game created by Igor Ostrovsky, built as a technical test.",
       "tech": ["Rust", "Bevy"],
       "year": "2025",
       "link": "https://github.com/Onsraa/robozzle"
@@ -54,7 +54,7 @@
     {
       "id": "003",
       "title": "Particle Life Simulator",
-      "description": "Simulateur de particules de vie en 3D avec pour objectif de déterminer la meilleure population qui pourrait survivre dans un environnement.",
+      "description": "3D life particle simulator with the goal of determining the best population that could survive in a given environment.",
       "tech": ["Rust", "Bevy", "Algorithme génétique"],
       "year": "2025",
       "link": "https://github.com/Onsraa/particle-life"
@@ -62,7 +62,7 @@
     {
       "id": "002",
       "title": "Harmonies with WFC",
-      "description": "Projet inspiré du jeu de société harmonies. Génération procédurale de terrain avec un algorithme Wave Function Collapse.",
+      "description": "Project inspired by the Harmonies board game. Procedural terrain generation using a Wave Function Collapse algorithm.",
       "tech": ["Rust", "Bevy", "Wave Function Collapse algorithm"],
       "year": "2025",
       "link": "https://github.com/Onsraa/harmonies-wfc"
@@ -70,15 +70,15 @@
     {
       "id": "001",
       "title": "Machine Learning",
-      "description": "Ce projet a été développé dans le cadre du cours \"Machine Learning\" et permet de tester différents algorithmes d'apprentissage sur des cas d'études simples ainsi que sur des tâches de classification d'images.",
+      "description": "This project was developed as part of the \"Machine Learning\" course and allows testing different learning algorithms on simple case studies as well as image classification tasks.",
       "tech": ["Rust", "Bevy"],
       "year": "2025",
       "link": "https://github.com/Onsraa/machine-learning"
     }
   ],
   "skills": {
-    "langages": ["Rust", "C++", "C#"],
+    "langages": ["Rust", "Python", "C++", "C#"],
     "crates": ["bevy", "tokio", "thiserror"],
-    "softwares": ["Unity", "AutoCAD", "BricsCAD"]
+    "softwares": ["Unity", "Unreal Engin", "Figma", "Notion", "AutoCAD", "BricsCAD"]
   }
 }
