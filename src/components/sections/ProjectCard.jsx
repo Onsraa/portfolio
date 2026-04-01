@@ -10,6 +10,7 @@ export default function ProjectCard({project}) {
 
     const title = getLocalized(project, 'title');
     const description = getLocalized(project, 'description');
+    const isFeatured = project.featured;
 
     return (<a
         href={project.link || '#'}
@@ -19,12 +20,13 @@ export default function ProjectCard({project}) {
             display: 'block',
             padding: '24px 0',
             borderBottom: `1px solid ${colors.borderLight}`,
+            borderLeft: isFeatured ? `2px solid ${colors.accent}` : 'none',
             textDecoration: 'none',
             color: 'inherit',
             transition: 'all 0.15s ease',
             background: hovered ? colors.bgHover : 'transparent',
-            marginLeft: hovered ? '8px' : '0',
-            paddingLeft: hovered ? '16px' : '0',
+            marginLeft: hovered && !isFeatured ? '8px' : '0',
+            paddingLeft: isFeatured ? '16px' : (hovered ? '16px' : '0'),
         }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -43,6 +45,18 @@ export default function ProjectCard({project}) {
                 }}>
                     {project.project_id}
                 </span>
+                {isFeatured && (
+                    <span style={{
+                        padding: '2px 8px',
+                        fontSize: '10px',
+                        color: colors.bg,
+                        background: colors.accent,
+                        letterSpacing: '0.05em',
+                        textTransform: 'uppercase',
+                    }}>
+                        PINNED
+                    </span>
+                )}
                 <h3 style={{
                     margin: 0,
                     fontSize: '17px',
@@ -67,7 +81,7 @@ export default function ProjectCard({project}) {
             <TranslationBadge show={description.needsTranslation}/>
         </p>
 
-        <div style={{display: 'flex', gap: '10px', flexWrap: 'wrap'}}>
+        <div style={{display: 'flex', gap: '10px', flexWrap: 'wrap', alignItems: 'center'}}>
             {(project.tech || []).map((tech, i) => (<span
                 key={i}
                 style={{
@@ -81,6 +95,26 @@ export default function ProjectCard({project}) {
             >
                 {tech}
             </span>))}
+            {project.github && (
+                <span
+                    onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        window.open(project.github, '_blank', 'noopener,noreferrer');
+                    }}
+                    style={{
+                        color: colors.textMuted,
+                        fontSize: '12px',
+                        cursor: 'pointer',
+                        marginLeft: '8px',
+                        transition: 'color 0.15s ease',
+                    }}
+                    onMouseEnter={(e) => e.target.style.color = colors.accent}
+                    onMouseLeave={(e) => e.target.style.color = colors.textMuted}
+                >
+                    <span style={{color: colors.textDarkest}}>→</span> github
+                </span>
+            )}
         </div>
     </a>);
 }

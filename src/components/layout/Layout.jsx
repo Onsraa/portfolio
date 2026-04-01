@@ -4,6 +4,7 @@ import Header from './Header';
 import Footer from './Footer';
 import { useTheme } from '@context/ThemeContext';
 import { useLanguage } from '@context/LanguageContext';
+import data from '../../data/portfolioData.json';
 
 export default function Layout() {
     const [loaded, setLoaded] = useState(false);
@@ -64,9 +65,11 @@ export default function Layout() {
                 <Link to="/projects" role="tab" aria-selected={activeTab === 'projects'} style={navButtonStyle(activeTab === 'projects')}>
                     {t.projects}
                 </Link>
-                <Link to="/articles" role="tab" aria-selected={activeTab === 'articles'} style={navButtonStyle(activeTab === 'articles')}>
-                    {t.articles}
-                </Link>
+                {data.articles.length > 0 && (
+                    <Link to="/articles" role="tab" aria-selected={activeTab === 'articles'} style={navButtonStyle(activeTab === 'articles')}>
+                        {t.articles}
+                    </Link>
+                )}
             </nav>
 
             <main id="main-content" style={{

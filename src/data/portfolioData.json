@@ -1,7 +1,7 @@
 {
   "config": {
     "name": "Teddy Truong",
-    "title": "Rust Developer",
+    "title": "CS Master's Student | Multi-Agent Systems & Robotics Simulation",
     "links": {
       "github": "https://github.com/Onsraa",
       "linkedin": "https://linkedin.com/in/teddy-truong",
@@ -29,8 +29,8 @@
       "company": "SNCF Réseau",
       "role_fr": "Ingénieur Logiciel & Data Scientist",
       "role_en": "Software Engineer & Data Scientist",
-      "description_fr": "Développement d'outils pour accélérer la productivité des ingénieurs AutoCAD/BricsCAD. Mise en place d'outils d'analyse pour optimiser les dépenses. Création de bibliothèques graphiques en AutoLisp.",
-      "description_en": "Development of tools to accelerate the productivity of AutoCAD/BricsCAD engineers. Implementation of analysis tools to optimize spending. Creation of graphic libraries in AutoLisp.",
+      "description_fr": "Développement d'outils de productivité pour ingénieurs AutoCAD/BricsCAD. Tableaux de bord analytiques pour l'optimisation des dépenses en infrastructure ferroviaire. Création de bibliothèques graphiques en AutoLisp.",
+      "description_en": "Built productivity tools for AutoCAD/BricsCAD engineers. Analytics dashboards to optimize infrastructure spending. Created graphic libraries in AutoLisp.",
       "tech": ["C#", "VB (.NET)", "Lisp (AutoLisp)", "AutoCAD", "BricsCAD", "Python", "M (Power Query)", "DAX", "Power Automate"],
       "is_current": false,
       "is_internship": false,
@@ -42,8 +42,8 @@
       "company": "Numérique Gagnant",
       "role_fr": "Développeur",
       "role_en": "Developer",
-      "description_fr": "Développement d'applications et d'outils pour améliorer la productivité des entreprises partenaires.",
-      "description_en": "Development of applications and tools to improve the productivity of partner companies.",
+      "description_fr": "Développement d'applications métier et d'automatisations pour améliorer la productivité des entreprises partenaires.",
+      "description_en": "Built business applications and automation tools to improve productivity for partner companies.",
       "tech": ["PHP", "NodeJS", "MySQL", "Powershell", "VBA", "Windev28", "Power Automate"],
       "is_current": false,
       "is_internship": false,
@@ -52,12 +52,25 @@
   ],
   "projects": [
     {
+      "id": 5,
+      "project_id": "005",
+      "title_fr": "MAFIS",
+      "title_en": "MAFIS",
+      "description_fr": "Simulateur de robotique d'entrepôt fonctionnant dans le navigateur. Injectez des pannes sur une flotte d'agents autonomes et observez en temps réel comment 8 algorithmes de coordination publiés se dégradent et récupèrent.",
+      "description_en": "Browser-based warehouse robotics simulator. Inject faults on a fleet of autonomous agents and observe in real-time how 8 published coordination algorithms degrade and recover.",
+      "tech": ["Rust", "Bevy", "WebAssembly", "MAPF"],
+      "year": "2025",
+      "featured": true,
+      "link": "https://stasis-website.vercel.app/simulator",
+      "github": "https://github.com/stasis-industries/mafis"
+    },
+    {
       "id": 4,
       "project_id": "004",
       "title_fr": "Robozzle",
       "title_en": "Robozzle",
-      "description_fr": "Reproduction du jeu Robozzle créé par Igor Ostrovsky, construit comme test technique.",
-      "description_en": "Reproduction of the Robozzle game created by Igor Ostrovsky, built as a technical test.",
+      "description_fr": "Reproduction du jeu de programmation Robozzle d'Igor Ostrovsky, construit comme exercice technique.",
+      "description_en": "Reproduction of Igor Ostrovsky's Robozzle programming puzzle game, built as a technical exercise.",
       "tech": ["Rust", "Bevy"],
       "year": "2025",
       "link": "https://github.com/Onsraa/robozzle"
@@ -67,8 +80,8 @@
       "project_id": "003",
       "title_fr": "Simulateur de Particules de Vie",
       "title_en": "Particle Life Simulator",
-      "description_fr": "Simulateur de particules de vie 3D avec pour objectif de déterminer la meilleure population pouvant survivre dans un environnement donné.",
-      "description_en": "3D life particle simulator with the goal of determining the best population that could survive in a given environment.",
+      "description_fr": "Simulation 3D de vie artificielle par particules. Un algorithme génétique fait évoluer les règles d'interaction pour maximiser la survie de la population.",
+      "description_en": "3D artificial life particle simulation. A genetic algorithm evolves interaction rules to maximize population survival.",
       "tech": ["Rust", "Bevy", "Algorithme génétique"],
       "year": "2025",
       "link": "https://github.com/Onsraa/particle-life"
@@ -78,9 +91,9 @@
       "project_id": "002",
       "title_fr": "Harmonies avec WFC",
       "title_en": "Harmonies with WFC",
-      "description_fr": "Projet inspiré du jeu de société Harmonies. Génération de terrain procédural en utilisant l'algorithme Wave Function Collapse.",
-      "description_en": "Project inspired by the Harmonies board game. Procedural terrain generation using a Wave Function Collapse algorithm.",
-      "tech": ["Rust", "Bevy", "Wave Function Collapse algorithm"],
+      "description_fr": "Génération de terrain procédural inspirée du jeu de société Harmonies, en utilisant l'algorithme Wave Function Collapse.",
+      "description_en": "Procedural terrain generation inspired by the Harmonies board game, using the Wave Function Collapse algorithm.",
+      "tech": ["Rust", "Bevy", "Wave Function Collapse"],
       "year": "2025",
       "link": "https://github.com/Onsraa/harmonies-wfc"
     },
@@ -89,17 +102,17 @@
       "project_id": "001",
       "title_fr": "Machine Learning",
       "title_en": "Machine Learning",
-      "description_fr": "Ce projet a été développé dans le cadre du cours \"Machine Learning\" et permet de tester différents algorithmes d'apprentissage sur des études de cas simples ainsi que des tâches de classification d'images.",
-      "description_en": "This project was developed as part of the \"Machine Learning\" course and allows testing different learning algorithms on simple case studies as well as image classification tasks.",
+      "description_fr": "Implémentation from scratch d'algorithmes de machine learning classiques en Rust. Tests sur des études de cas et classification d'images, sans bibliothèques ML externes.",
+      "description_en": "From-scratch implementation of classic machine learning algorithms in Rust. Tested on case studies and image classification, no external ML libraries.",
       "tech": ["Rust", "Bevy"],
       "year": "2025",
       "link": "https://github.com/Onsraa/machine-learning"
     }
   ],
   "skills": {
-    "langages": ["Rust", "Python", "C++", "C#"],
-    "crates": ["bevy", "tokio", "thiserror"],
-    "softwares": ["Unity", "Unreal Engine", "Figma", "Notion", "AutoCAD", "BricsCAD"]
+    "languages": ["Rust", "Python", "C++", "C#"],
+    "frameworks": ["Bevy", "Unity", "WebAssembly"],
+    "domains": ["Multi-Agent Systems", "Robotics Simulation", "3D Visualization"]
   },
   "articles": []
 }

@@ -4,7 +4,7 @@ const LanguageContext = createContext();
 
 export const translations = {
   fr: {
-        introduction: "Grimpeur, joueur, développeur. J'essaye encore de comprendre comment marche les lifetimes en Rust.",
+        introduction: "Grimpeur, joueur, développeur. Je construis des simulateurs de robotique — et j'essaye encore de comprendre les lifetimes en Rust.",
         experience: 'Expérience',
         projects: 'Projets',
         articles: 'Articles',
@@ -25,13 +25,10 @@ export const translations = {
         skills: 'compétences',
         catSkills: '$ cat skills.md',
         languages: 'Langages',
-        crates: 'Crates',
-        softwares: 'Softwares',
         notTranslated: 'FR uniquement',
-        lastLogin: 'last login',
     },
     en: {
-        introduction: "Climber, gamer, developer. Still trying to understand how lifetimes work in Rust.",
+        introduction: "Climber, gamer, developer. I build robotics simulators — still figuring out Rust lifetimes.",
         experience: 'Experience',
         projects: 'Projects',
         articles: 'Articles',
@@ -52,10 +49,7 @@ export const translations = {
         skills: 'skills',
         catSkills: '$ cat skills.md',
         languages: 'Languages',
-        crates: 'Crates',
-        softwares: 'Softwares',
         notTranslated: 'EN only',
-        lastLogin: 'last login',
     },
 };
 
