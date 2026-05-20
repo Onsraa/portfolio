@@ -4,7 +4,7 @@ const LanguageContext = createContext();
 
 export const translations = {
   fr: {
-        introduction: "Grimpeur, joueur, développeur. Je construis des simulateurs de robotique — et j'essaye encore de comprendre les lifetimes en Rust.",
+        introduction: "Grimpeur, joueur, développeur. Je construis des simulateurs — et j'essaye encore de comprendre les lifetimes en Rust.",
         experience: 'Expérience',
         projects: 'Projets',
         articles: 'Articles',
@@ -28,7 +28,7 @@ export const translations = {
         notTranslated: 'FR uniquement',
     },
     en: {
-        introduction: "Climber, gamer, developer. I build robotics simulators — still figuring out Rust lifetimes.",
+        introduction: "Climber, gamer, developer. I build simulators — still figuring out Rust lifetimes.",
         experience: 'Experience',
         projects: 'Projects',
         articles: 'Articles',
