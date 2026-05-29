@@ -82,7 +82,7 @@ export default function Header({ loaded }) {
                 <a href={config.links.cv} target="_blank" rel="noopener noreferrer"
                    aria-label="Download CV"
                    style={{ color: colors.textMuted, textDecoration: 'none', fontSize: '14px' }}>
-                    <span style={{ color: colors.textDarkest }}>→</span> cv.pdf
+                    <span style={{ color: colors.textDarkest }}>→</span> download cv
                 </a>
             </div>
         </header>
