@@ -74,11 +74,6 @@ export default function Header({ loaded }) {
                    style={{ color: colors.textMuted, textDecoration: 'none', fontSize: '14px' }}>
                     <span style={{ color: colors.textDarkest }}>→</span> linkedin
                 </a>
-                <a href={config.links.email}
-                   aria-label="Email"
-                   style={{ color: colors.textMuted, textDecoration: 'none', fontSize: '14px' }}>
-                    <span style={{ color: colors.textDarkest }}>→</span> email
-                </a>
                 <a href={config.links.cv} target="_blank" rel="noopener noreferrer"
                    aria-label="Download CV"
                    style={{ color: colors.textMuted, textDecoration: 'none', fontSize: '14px' }}>
