@@ -119,6 +119,23 @@ function ContentBlock({ block }) {
                 </figure>
             );
 
+        case 'embed':
+            return (
+                <figure style={{ margin: '32px 0' }}>
+                    <iframe
+                        src={block.url}
+                        title={block.title}
+                        allow="fullscreen"
+                        allowFullScreen
+                        style={{ width: '100%', aspectRatio: '16 / 9', border: `1px solid ${colors.borderLight}`, display: 'block' }}
+                    />
+                    <figcaption style={{ marginTop: '8px', fontSize: '12px', color: colors.textDark, textAlign: 'center' }}>
+                        {block.caption}{' '}
+                        <a href={block.url} target="_blank" rel="noreferrer" style={{ color: colors.textSecondary }}>{block.open}</a>
+                    </figcaption>
+                </figure>
+            );
+
         case 'list': {
             const items = block.items?.filter(item => item && item.trim() !== '') || [];
             if (items.length === 0) return null;

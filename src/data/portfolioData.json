@@ -62,7 +62,8 @@
       "year": "2025",
       "featured": true,
       "link": "https://stasis-website.vercel.app/simulator",
-      "github": "https://github.com/stasis-industries/mafis"
+      "github": "https://github.com/stasis-industries/mafis",
+      "article": {"slug": "mafis-paams-2026-best-paper", "label": "Best Paper Award, AREA at PAAMS 2026: the talk ↗"}
     },
     {
       "id": 4,
@@ -114,5 +115,189 @@
     "frameworks": ["Bevy", "Unity", "WebAssembly"],
     "domains": ["Multi-Agent Systems", "Robotics Simulation", "3D Visualization"]
   },
-  "articles": []
+  "articles": [
+    {
+      "id": 1,
+      "slug": "mafis-paams-2026-best-paper",
+      "published_at": "2026-10-21",
+      "title_en": "MAFIS wins the Best Paper Award at AREA, PAAMS 2026",
+      "title_fr": "MAFIS reçoit le prix du meilleur article à AREA, PAAMS 2026",
+      "excerpt_en": "The talk, live and interactive, and the story behind the paper: how robot fleets cope when things go wrong.",
+      "excerpt_fr": "La présentation, en direct et interactive, et l'histoire de l'article : comment les flottes de robots font face aux pannes.",
+      "tags": [
+        "MAFIS",
+        "PAAMS 2026",
+        "AREA",
+        "multi-agent",
+        "robotics"
+      ],
+      "cover_image": null,
+      "content_en": [
+        {
+          "type": "paragraph",
+          "content": "On 21 October 2026, in Napoli, our paper \"MAFIS: A Resilience Observatory for Lifelong Multi-Agent Path Finding\" received the Best Paper Award of the 6th Workshop on Agents and Robots for reliable Engineered Autonomy (AREA), held at PAAMS 2026. The paper is by Teddy Truong and Yannick Francillette, Université du Québec à Chicoutimi and the Multi-utilisateur Interaction Experience Lab."
+        },
+        {
+          "type": "image",
+          "url": "/articles/area-2026-best-paper.jpg",
+          "alt": "Best Paper Award, 6th AREA Workshop, PAAMS 2026, Napoli, 21 October 2026"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "content": "The talk"
+        },
+        {
+          "type": "paragraph",
+          "content": "This is the deck I presented, running live in your browser. The robots are real MAFIS runs, replayed in 3D."
+        },
+        {
+          "type": "embed",
+          "url": "/talks/mafis-paams-2026.html",
+          "title": "MAFIS talk at AREA, PAAMS 2026",
+          "caption": "Click the right side of the slides (or press →) to go forward, the left side (or ←) to go back. F for full screen, N for the speaker notes.",
+          "open": "Open in a new tab ↗"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "content": "PAAMS and AREA"
+        },
+        {
+          "type": "paragraph",
+          "content": "PAAMS, the International Conference on Practical Applications of Agents and Multi-Agent Systems, is a yearly conference on agent technology put to work in real applications. AREA, Agents and Robots for reliable Engineered Autonomy, is one of its workshops. It gathers people who build autonomous agents and robots and want them to be dependable: fault tolerance, verification and validation, and multi-agent coordination. The 2026 edition was organised by Angelo Ferrando and Rafael C. Cardoso."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "content": "What MAFIS is"
+        },
+        {
+          "type": "paragraph",
+          "content": "MAFIS, the Multi-Agent Fault Injection Simulator, studies warehouse robot fleets that pick up and deliver containers without end. Planners for these fleets are usually ranked on one number: tasks delivered when every robot moves exactly as planned. Real robots break down, wear out, freeze or run late. In 2026 the League of Robot Runners, the main competition in this field, started adding delays for the same reason."
+        },
+        {
+          "type": "paragraph",
+          "content": "MAFIS borrows the method of chaos engineering. Every run has a fault-free twin: the same map, robots and tasks. A fault is injected into one copy only, and the gap between the two is the cost of the fault. Four kinds of fault are tested: a burst of failures, wear over time, a zone that freezes, and robots that pause at random."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fault tolerance: the share of the twin's work still done after the fault.",
+            "Critical time: how long the fleet works at less than half its twin's pace.",
+            "Time-weighted gap: whether the gap closes or keeps growing.",
+            "Cascade spread: how many robots one fault blocks, through chains of robots waiting on each other."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "content": "What it shows"
+        },
+        {
+          "type": "paragraph",
+          "content": "Being fast without faults does not mean being fast with them. On a small warehouse with 40 robots, PIBT delivers more than RHCR when nothing goes wrong, but fewer once robots pause at random. Across 30 random setups the order flips in 24. A fault-free benchmark would pick the wrong planner for that warehouse."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "content": "Try it"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The simulator runs in the browser, no install: stasis-website.vercel.app/simulator",
+            "The code is open: github.com/stasis-industries/mafis"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": "Thank you to the AREA organisers and reviewers, and to everyone who came to talk after the session."
+        }
+      ],
+      "content_fr": [
+        {
+          "type": "paragraph",
+          "content": "Le 21 octobre 2026 à Naples, notre article « MAFIS: A Resilience Observatory for Lifelong Multi-Agent Path Finding » a reçu le prix du meilleur article du 6e atelier AREA (Agents and Robots for reliable Engineered Autonomy), à la conférence PAAMS 2026. L'article est signé Teddy Truong et Yannick Francillette, de l'Université du Québec à Chicoutimi et du Multi-utilisateur Interaction Experience Lab."
+        },
+        {
+          "type": "image",
+          "url": "/articles/area-2026-best-paper.jpg",
+          "alt": "Prix du meilleur article, 6e atelier AREA, PAAMS 2026, Naples, 21 octobre 2026"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "content": "La présentation"
+        },
+        {
+          "type": "paragraph",
+          "content": "Voici la présentation que j'ai donnée, qui tourne directement dans votre navigateur. Les robots sont de vraies exécutions de MAFIS, rejouées en 3D."
+        },
+        {
+          "type": "embed",
+          "url": "/talks/mafis-paams-2026.html",
+          "title": "Présentation MAFIS à AREA, PAAMS 2026",
+          "caption": "Cliquez sur la droite des diapositives (ou →) pour avancer, sur la gauche (ou ←) pour revenir. F pour le plein écran, N pour les notes.",
+          "open": "Ouvrir dans un nouvel onglet ↗"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "content": "PAAMS et AREA"
+        },
+        {
+          "type": "paragraph",
+          "content": "PAAMS, l'International Conference on Practical Applications of Agents and Multi-Agent Systems, est une conférence annuelle sur les agents et les systèmes multi-agents appliqués à des cas réels. AREA, Agents and Robots for reliable Engineered Autonomy, est l'un de ses ateliers. Il réunit celles et ceux qui conçoivent des agents et des robots autonomes et veulent qu'ils soient fiables : tolérance aux pannes, vérification et validation, coordination multi-agents. L'édition 2026 était organisée par Angelo Ferrando et Rafael C. Cardoso."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "content": "Ce qu'est MAFIS"
+        },
+        {
+          "type": "paragraph",
+          "content": "MAFIS, le Multi-Agent Fault Injection Simulator, étudie les flottes de robots d'entrepôt qui prennent et livrent des bacs sans fin. Les planificateurs de ces flottes sont en général classés sur un seul chiffre : les tâches livrées quand chaque robot suit exactement son plan. Or les vrais robots tombent en panne, s'usent, se figent ou prennent du retard. En 2026, la League of Robot Runners, la principale compétition du domaine, a commencé à ajouter des retards pour cette raison."
+        },
+        {
+          "type": "paragraph",
+          "content": "MAFIS reprend la méthode du chaos engineering. Chaque exécution a un jumeau sans panne : même carte, mêmes robots, mêmes tâches. Une panne est injectée dans une seule copie, et l'écart entre les deux est le coût de la panne. Quatre types de panne sont testés : une rafale de pannes, l'usure, une zone qui se fige, et des robots qui s'arrêtent au hasard."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Tolérance aux pannes : la part du travail du jumeau encore faite après la panne.",
+            "Temps critique : combien de temps la flotte travaille à moins de la moitié du rythme de son jumeau.",
+            "Écart pondéré dans le temps : l'écart se referme-t-il ou continue-t-il de grandir ?",
+            "Propagation en cascade : combien de robots une panne bloque, par des chaînes de robots qui s'attendent."
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "content": "Ce que cela montre"
+        },
+        {
+          "type": "paragraph",
+          "content": "Être rapide sans panne ne veut pas dire être rapide avec. Sur un petit entrepôt de 40 robots, PIBT livre plus que RHCR quand tout va bien, mais moins dès que des robots s'arrêtent au hasard. Sur 30 configurations aléatoires, l'ordre s'inverse dans 24. Un test sans panne choisirait le mauvais planificateur pour cet entrepôt."
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "content": "L'essayer"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Le simulateur tourne dans le navigateur, sans installation : stasis-website.vercel.app/simulator",
+            "Le code est ouvert : github.com/stasis-industries/mafis"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": "Merci aux organisateurs et aux relecteurs d'AREA, et à toutes les personnes venues discuter après la session."
+        }
+      ]
+    }
+  ]
 }
