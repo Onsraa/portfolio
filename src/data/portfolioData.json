@@ -161,10 +161,8 @@
       "description_fr": "Le triangle de la fraude appliqué aux agents IA : Cressey s’intercale entre un agent et ses outils, évalue pression, opportunité et rationalisation à chaque étape, et retient un appel dangereux avant qu’il ne s’exécute.",
       "description_en": "The fraud triangle, applied to AI agents: Cressey sits between an agent and its tools, scores pressure, opportunity and rationalization at every step, and holds a dangerous call before it runs.",
       "tech": [
-        "Python",
-        "FastAPI",
-        "React",
-        "TypeScript",
+        "AI agent security",
+        "TypeSafe Jev",
         "MCP"
       ],
       "year": "2026",
@@ -183,10 +181,9 @@
       "description_fr": "Simulateur de robotique d'entrepôt fonctionnant dans le navigateur. Injectez des pannes sur une flotte d'agents autonomes et observez en temps réel comment les algorithmes de coordination se dégradent et récupèrent.",
       "description_en": "Browser-based warehouse robotics simulator. Inject faults on a fleet of autonomous agents and observe in real-time how algorithms degrade and recover.",
       "tech": [
-        "Rust",
-        "Bevy",
-        "WebAssembly",
-        "MAPF"
+        "Simulator",
+        "MAPF",
+        "Fault injection"
       ],
       "year": "2025",
       "link": "https://stasis-website.vercel.app/simulator",
@@ -206,11 +203,9 @@
       "description_fr": "IA agentique qui orchestre des projets entiers : à partir d’un brief client, elle planifie, s’appuie sur la mémoire de l’agence, fait valider chaque discipline puis crée un vrai projet GitLab avec des tâches réparties selon les compétences de chacun.",
       "description_en": "Agentic AI that orchestrates entire projects: from a client brief it plans, grounds the plan in agency memory, gets each discipline lead to ratify it, then creates a real GitLab project with tasks staffed by skill.",
       "tech": [
-        "Python",
-        "FastAPI",
-        "Gemini",
-        "MongoDB",
-        "React"
+        "RAG",
+        "Multi-agent",
+        "MCP"
       ],
       "year": "2026",
       "link": "https://github.com/Onsraa/sprint0",
@@ -224,8 +219,7 @@
       "description_fr": "Reproduction du jeu de programmation Robozzle d'Igor Ostrovsky, construit comme exercice technique.",
       "description_en": "Reproduction of Igor Ostrovsky's Robozzle programming puzzle game, built as a technical exercise.",
       "tech": [
-        "Rust",
-        "Bevy"
+        "Puzzle game"
       ],
       "year": "2025",
       "link": "https://github.com/Onsraa/robozzle"
@@ -238,9 +232,8 @@
       "description_fr": "Simulation 3D de vie artificielle par particules. Un algorithme génétique fait évoluer les règles d'interaction pour maximiser la survie de la population.",
       "description_en": "3D artificial life particle simulation. A genetic algorithm evolves interaction rules to maximize population survival.",
       "tech": [
-        "Rust",
-        "Bevy",
-        "Algorithme génétique"
+        "Artificial life",
+        "Genetic algorithm"
       ],
       "year": "2025",
       "link": "https://github.com/Onsraa/particle-life"
@@ -253,8 +246,7 @@
       "description_fr": "Génération de terrain procédural inspirée du jeu de société Harmonies, en utilisant l'algorithme Wave Function Collapse.",
       "description_en": "Procedural terrain generation inspired by the Harmonies board game, using the Wave Function Collapse algorithm.",
       "tech": [
-        "Rust",
-        "Bevy",
+        "Procedural generation",
         "Wave Function Collapse"
       ],
       "year": "2025",
@@ -268,8 +260,8 @@
       "description_fr": "Implémentation from scratch d'algorithmes de machine learning classiques en Rust. Tests sur des études de cas et classification d'images, sans bibliothèques ML externes.",
       "description_en": "From-scratch implementation of classic machine learning algorithms in Rust. Tested on case studies and image classification, no external ML libraries.",
       "tech": [
-        "Rust",
-        "Bevy"
+        "Neural networks",
+        "From scratch"
       ],
       "year": "2025",
       "link": "https://github.com/Onsraa/machine-learning"
