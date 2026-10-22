@@ -56,35 +56,6 @@ export default function Header({ loaded }) {
                 {t.introduction}
             </p>
 
-            <div style={{
-                marginTop: '32px',
-                display: 'flex',
-                gap: '24px',
-                opacity: loaded ? 1 : 0,
-                transition: 'opacity 0.6s ease 1.5s',
-                flexWrap: 'wrap'
-            }}>
-                <a href={config.links.github} target="_blank" rel="noopener noreferrer"
-                   aria-label="GitHub"
-                   style={{ color: colors.textMuted, textDecoration: 'none', fontSize: '14px' }}>
-                    <span style={{ color: colors.textDarkest }}>→</span> github
-                </a>
-                <a href={config.links.linkedin} target="_blank" rel="noopener noreferrer"
-                   aria-label="LinkedIn"
-                   style={{ color: colors.textMuted, textDecoration: 'none', fontSize: '14px' }}>
-                    <span style={{ color: colors.textDarkest }}>→</span> linkedin
-                </a>
-                <a href={config.links.email}
-                   aria-label="Email"
-                   style={{ color: colors.textMuted, textDecoration: 'none', fontSize: '14px' }}>
-                    <span style={{ color: colors.textDarkest }}>→</span> {config.links.email.replace('mailto:', '')}
-                </a>
-                <a href={config.links.cv} target="_blank" rel="noopener noreferrer"
-                   aria-label="Download CV"
-                   style={{ color: colors.textMuted, textDecoration: 'none', fontSize: '14px' }}>
-                    <span style={{ color: colors.textDarkest }}>→</span> download cv
-                </a>
-            </div>
         </header>
     );
 }

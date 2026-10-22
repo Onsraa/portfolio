@@ -6,7 +6,7 @@
       "github": "https://github.com/Onsraa",
       "linkedin": "https://linkedin.com/in/teddy-truong",
       "email": "mailto:teddytruong@protonmail.com",
-      "cv": "cv.pdf"
+      "cv": "/cv.pdf"
     }
   },
   "experiences": [
@@ -19,13 +19,10 @@
       "start": "2026-09",
       "end": null,
       "location": null,
-      "mode": null,
       "description_en": "The new way to experience fashion.",
       "description_fr": "La nouvelle façon de vivre la mode.",
       "highlights_en": [],
       "highlights_fr": [],
-      "achievements_en": [],
-      "achievements_fr": [],
       "tech": [],
       "is_current": true,
       "is_internship": false,
@@ -40,13 +37,10 @@
       "start": "2026-07",
       "end": null,
       "location": "Paris, France",
-      "mode": "hybrid",
       "description_en": "Built a multiplayer agentic AI crisis simulator with a custom framework.",
       "description_fr": "Conception d’un simulateur de crise multijoueur à base d’IA agentique, sur un framework maison.",
       "highlights_en": [],
       "highlights_fr": [],
-      "achievements_en": [],
-      "achievements_fr": [],
       "tech": [],
       "is_current": true,
       "is_internship": true,
@@ -61,7 +55,6 @@
       "start": "2025-12",
       "end": null,
       "location": "Chicoutimi, Québec, Canada",
-      "mode": "hybrid",
       "description_en": "CogniActif (EdTech, active learning): a physical and cognitive training game.",
       "description_fr": "CogniActif (EdTech, apprentissage actif) : un jeu d’entraînement physique et cognitif.",
       "highlights_en": [
@@ -74,8 +67,6 @@
         "Évolution du jeu en plateforme SaaS B2B : portail web et base de données de bout en bout pour gérer des rôles utilisateurs à plusieurs niveaux et automatiser la vente de licences.",
         "Mise en place de KPI sur mesure et de tableaux de bord pour suivre l’adoption et les tendances de performance."
       ],
-      "achievements_en": [],
-      "achievements_fr": [],
       "tech": [
         "C#",
         "Unity",
@@ -94,24 +85,19 @@
       "start": "2023-10",
       "end": "2025-08",
       "location": "Seine-Saint-Denis, France",
-      "mode": "hybrid",
       "description_en": "Tools for CAD software, cost optimisation and workflow automation.",
       "description_fr": "Outils pour logiciels de CAO, optimisation des coûts et automatisation des processus.",
       "highlights_en": [
         "Development and maintenance of tools for CAD software.",
         "Optimized software expenses by identifying and reducing unnecessary costs.",
-        "Automated routine tasks and workflows, increasing efficiency and reducing manual workload."
+        "Automated routine tasks and workflows, increasing efficiency and reducing manual workload.",
+        "Improved an existing data processing program by 99.9%, from hours to seconds.",
+        "Implemented essential KPIs for company spending, used across the whole company."
       ],
       "highlights_fr": [
         "Développement et maintenance d’outils pour logiciels de CAO.",
         "Optimisation des dépenses logicielles en identifiant et réduisant les coûts inutiles.",
-        "Automatisation des tâches et processus récurrents, pour plus d’efficacité et moins de travail manuel."
-      ],
-      "achievements_en": [
-        "Improved an existing data processing program by 99.9%, from hours to seconds.",
-        "Implemented essential KPIs for company spending, used across the whole company."
-      ],
-      "achievements_fr": [
+        "Automatisation des tâches et processus récurrents, pour plus d’efficacité et moins de travail manuel.",
         "Programme de traitement de données existant accéléré de 99,9 %, des heures aux secondes.",
         "Mise en place des KPI essentiels sur les dépenses, utilisés dans toute l’entreprise."
       ],
@@ -139,7 +125,6 @@
       "start": "2022-10",
       "end": "2023-09",
       "location": "Maisons-Alfort, France",
-      "mode": "onSite",
       "description_en": "Productivity tools, automation and maintenance for client companies.",
       "description_fr": "Outils de productivité, automatisation et maintenance pour des entreprises clientes.",
       "highlights_en": [
@@ -154,8 +139,6 @@
         "Migration technique majeure d’un site web legacy vers une version stable.",
         "Gestion des tickets clients et maintenance du matériel."
       ],
-      "achievements_en": [],
-      "achievements_fr": [],
       "tech": [
         "PHP",
         "NodeJS",
@@ -172,18 +155,67 @@
   ],
   "projects": [
     {
+      "id": 7,
+      "project_id": "007",
+      "title_fr": "Cressey",
+      "title_en": "Cressey",
+      "description_fr": "Le triangle de la fraude appliqué aux agents IA : Cressey s’intercale entre un agent et ses outils, évalue pression, opportunité et rationalisation à chaque étape, et retient un appel dangereux avant qu’il ne s’exécute.",
+      "description_en": "The fraud triangle, applied to AI agents: Cressey sits between an agent and its tools, scores pressure, opportunity and rationalization at every step, and holds a dangerous call before it runs.",
+      "tech": [
+        "Python",
+        "FastAPI",
+        "React",
+        "TypeScript",
+        "MCP"
+      ],
+      "year": "2026",
+      "link": "https://github.com/Onsraa/cressey",
+      "award": {
+        "en": "1st place · ESSECKATHON Secure Horizons 2026",
+        "fr": "1re place · ESSECKATHON Secure Horizons 2026"
+      },
+      "selected": true
+    },
+    {
       "id": 5,
       "project_id": "005",
       "title_fr": "Multi-Agents Fault Injection Simulator",
       "title_en": "Multi-Agents Fault Injection Simulator",
       "description_fr": "Simulateur de robotique d'entrepôt fonctionnant dans le navigateur. Injectez des pannes sur une flotte d'agents autonomes et observez en temps réel comment les algorithmes de coordination se dégradent et récupèrent.",
       "description_en": "Browser-based warehouse robotics simulator. Inject faults on a fleet of autonomous agents and observe in real-time how algorithms degrade and recover.",
-      "tech": ["Rust", "Bevy", "WebAssembly", "MAPF"],
+      "tech": [
+        "Rust",
+        "Bevy",
+        "WebAssembly",
+        "MAPF"
+      ],
       "year": "2025",
-      "featured": true,
       "link": "https://stasis-website.vercel.app/simulator",
       "github": "https://github.com/stasis-industries/mafis",
-      "article": {"slug": "mafis-paams-2026-best-paper", "label": "Best Paper Award, AREA at PAAMS 2026: the talk ↗"}
+      "award": {
+        "en": "Best Paper Award · AREA, PAAMS 2026",
+        "fr": "Prix du meilleur article · AREA, PAAMS 2026",
+        "article": "mafis-paams-2026-best-paper"
+      },
+      "selected": true
+    },
+    {
+      "id": 6,
+      "project_id": "006",
+      "title_fr": "sprint0",
+      "title_en": "sprint0",
+      "description_fr": "IA agentique qui orchestre des projets entiers : à partir d’un brief client, elle planifie, s’appuie sur la mémoire de l’agence, fait valider chaque discipline puis crée un vrai projet GitLab avec des tâches réparties selon les compétences de chacun.",
+      "description_en": "Agentic AI that orchestrates entire projects: from a client brief it plans, grounds the plan in agency memory, gets each discipline lead to ratify it, then creates a real GitLab project with tasks staffed by skill.",
+      "tech": [
+        "Python",
+        "FastAPI",
+        "Gemini",
+        "MongoDB",
+        "React"
+      ],
+      "year": "2026",
+      "link": "https://github.com/Onsraa/sprint0",
+      "selected": true
     },
     {
       "id": 4,
@@ -192,7 +224,10 @@
       "title_en": "Robozzle",
       "description_fr": "Reproduction du jeu de programmation Robozzle d'Igor Ostrovsky, construit comme exercice technique.",
       "description_en": "Reproduction of Igor Ostrovsky's Robozzle programming puzzle game, built as a technical exercise.",
-      "tech": ["Rust", "Bevy"],
+      "tech": [
+        "Rust",
+        "Bevy"
+      ],
       "year": "2025",
       "link": "https://github.com/Onsraa/robozzle"
     },
@@ -203,7 +238,11 @@
       "title_en": "Particle Life Simulator",
       "description_fr": "Simulation 3D de vie artificielle par particules. Un algorithme génétique fait évoluer les règles d'interaction pour maximiser la survie de la population.",
       "description_en": "3D artificial life particle simulation. A genetic algorithm evolves interaction rules to maximize population survival.",
-      "tech": ["Rust", "Bevy", "Algorithme génétique"],
+      "tech": [
+        "Rust",
+        "Bevy",
+        "Algorithme génétique"
+      ],
       "year": "2025",
       "link": "https://github.com/Onsraa/particle-life"
     },
@@ -214,7 +253,11 @@
       "title_en": "Harmonies with WFC",
       "description_fr": "Génération de terrain procédural inspirée du jeu de société Harmonies, en utilisant l'algorithme Wave Function Collapse.",
       "description_en": "Procedural terrain generation inspired by the Harmonies board game, using the Wave Function Collapse algorithm.",
-      "tech": ["Rust", "Bevy", "Wave Function Collapse"],
+      "tech": [
+        "Rust",
+        "Bevy",
+        "Wave Function Collapse"
+      ],
       "year": "2025",
       "link": "https://github.com/Onsraa/harmonies-wfc"
     },
@@ -225,15 +268,19 @@
       "title_en": "Machine Learning",
       "description_fr": "Implémentation from scratch d'algorithmes de machine learning classiques en Rust. Tests sur des études de cas et classification d'images, sans bibliothèques ML externes.",
       "description_en": "From-scratch implementation of classic machine learning algorithms in Rust. Tested on case studies and image classification, no external ML libraries.",
-      "tech": ["Rust", "Bevy"],
+      "tech": [
+        "Rust",
+        "Bevy"
+      ],
       "year": "2025",
       "link": "https://github.com/Onsraa/machine-learning"
     }
   ],
   "skills": {
-    "languages": ["Rust", "Python", "C++", "C#"],
-    "frameworks": ["Bevy", "Unity", "WebAssembly"],
-    "domains": ["Multi-Agent Systems", "Robotics Simulation", "3D Visualization"]
+    "languages": ["Rust", "Python", "TypeScript", "C++", "C#"],
+    "frameworks": ["Bevy", "Unity", "WebAssembly", "FastAPI", "React"],
+    "applied AI": ["AI agents", "Multi-agent orchestration", "RAG", "Hybrid vector search", "Embeddings", "MCP", "Structured outputs", "LLM guardrails & security", "Gemini (Vertex AI)"],
+    "domains": ["Multi-Agent Systems", "Robotics Simulation", "3D Visualization", "AI Security"]
   },
   "articles": [
     {

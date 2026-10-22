@@ -42,6 +42,68 @@ body {
 }
 
 /* Animations */
+/* expandable details on experience and project rows */
+.disclosure {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.35s ease, opacity 0.25s ease;
+}
+.disclosure[data-open="true"] { grid-template-rows: 1fr; opacity: 1; }
+.disclosure > div { overflow: hidden; min-height: 0; }
+.details-toggle svg { transition: transform 0.25s ease; }
+.details-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+@media (prefers-reduced-motion: reduce) {
+  .disclosure, .details-toggle svg { transition: none; }
+}
+
+/* the contact footer: one row per link, the label column drops on narrow screens */
+.footer-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 -8px;
+  padding: 5px 8px;
+  transition: background 0.15s ease;
+}
+.footer-link {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 26px 92px minmax(0, 1fr) 16px;
+  align-items: center;
+  gap: 8px;
+}
+.footer-value { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@media (max-width: 520px) {
+  .footer-link { grid-template-columns: 22px minmax(0, 1fr) 16px; }
+  .footer-label { display: none; }
+}
+
+/* a project description shown on one line while its row is closed */
+.clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* the ripple around current roles on the experience timeline */
+.timeline-ripple {
+  position: absolute;
+  inset: -1px;
+  border-radius: 50%;
+  border: 1px solid;
+  animation: timeline-ripple 2.4s ease-out infinite;
+}
+@keyframes timeline-ripple {
+  from { transform: scale(1); opacity: 0.6; }
+  to { transform: scale(2.6); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .timeline-ripple { animation: none; display: none; }
+}
+
 @keyframes pulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.4; }

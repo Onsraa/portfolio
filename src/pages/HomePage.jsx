@@ -50,19 +50,22 @@ export default function HomePage({ section = 'experience' }) {
                 </section>
             )}
 
-            {section === 'projects' && (
-                <section>
+            {section === 'projects' && [
+                [t.selectedProjects, projects.filter((p) => p.selected)],
+                [t.otherProjects, projects.filter((p) => !p.selected)],
+            ].map(([title, list], i) => (
+                <section key={title} style={{ marginTop: i ? '64px' : 0 }}>
                     <SectionHeader
-                        title={t.projects}
-                        count={`${projects.length} ${t.entries}`}
+                        title={title}
+                        count={`${list.length} ${t.entries}`}
                     />
                     <div>
-                        {projects.map((project) => (
+                        {list.map((project) => (
                             <ProjectCard key={project.id} project={project} />
                         ))}
                     </div>
                 </section>
-            )}
+            ))}
         </div>
     );
 }
