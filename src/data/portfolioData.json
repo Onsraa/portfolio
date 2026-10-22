@@ -276,12 +276,6 @@
       "link": "https://github.com/Onsraa/machine-learning"
     }
   ],
-  "skills": {
-    "languages": ["Rust", "Python", "TypeScript", "C++", "C#"],
-    "frameworks": ["Bevy", "Unity", "WebAssembly", "FastAPI", "React"],
-    "applied AI": ["AI agents", "Multi-agent orchestration", "RAG", "Hybrid vector search", "Embeddings", "MCP", "Structured outputs", "LLM guardrails & security", "Gemini (Vertex AI)"],
-    "domains": ["Multi-Agent Systems", "Robotics Simulation", "3D Visualization", "AI Security"]
-  },
   "articles": [
     {
       "id": 1,

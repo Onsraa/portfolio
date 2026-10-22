@@ -2,11 +2,11 @@ import { useLayoutEffect, useMemo, useRef } from 'react';
 import gsap from 'gsap';
 import { useOutletContext } from 'react-router-dom';
 import { SectionHeader } from '@components/ui';
-import { ExperienceCard, ProjectCard, SkillsBox } from '@components/sections';
+import { ExperienceCard, ProjectCard } from '@components/sections';
 import { useLanguage } from '@context/LanguageContext';
 import data from '../data/portfolioData.json';
 
-const { experiences, projects, skills } = data;
+const { experiences, projects } = data;
 
 export default function HomePage({ section = 'experience' }) {
     const { loaded } = useOutletContext();
@@ -38,15 +38,10 @@ export default function HomePage({ section = 'experience' }) {
                         count={`${experiences.length} ${t.posts} · ${yearsOfExperience} ${t.years}`}
                     />
                     <div style={{ marginTop: '8px' }}>
-                        {experiences.map((exp, index) => (
-                            <ExperienceCard
-                                key={exp.id}
-                                experience={exp}
-                                isLast={index === experiences.length - 1}
-                            />
+                        {experiences.map((exp) => (
+                            <ExperienceCard key={exp.id} experience={exp} />
                         ))}
                     </div>
-                    <SkillsBox skills={skills} />
                 </section>
             )}
 
