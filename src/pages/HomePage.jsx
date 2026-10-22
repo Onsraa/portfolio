@@ -1,4 +1,5 @@
-import { useMemo } from 'react';
+import { useLayoutEffect, useMemo, useRef } from 'react';
+import gsap from 'gsap';
 import { useOutletContext } from 'react-router-dom';
 import { SectionHeader } from '@components/ui';
 import { ExperienceCard, ProjectCard, SkillsBox } from '@components/sections';
@@ -12,9 +13,20 @@ export default function HomePage({ section = 'experience' }) {
     const { t } = useLanguage();
 
     const yearsOfExperience = useMemo(() => new Date().getFullYear() - 2022, []);
+    const root = useRef(null);
+
+    // cards rise in one after another when the section opens; skipped when the visitor asks for reduced motion
+    useLayoutEffect(() => {
+        if (!loaded) return;
+        const mm = gsap.matchMedia();
+        mm.add('(prefers-reduced-motion: no-preference)', () => {
+            gsap.fromTo(root.current.querySelectorAll('.xp-card, .project-card'), { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out', stagger: 0.08, delay: 0.15 });
+        }, root);
+        return () => mm.revert();
+    }, [loaded, section]);
 
     return (
-        <div style={{
+        <div ref={root} style={{
             opacity: loaded ? 1 : 0,
             transform: loaded ? 'translateY(0)' : 'translateY(20px)',
             transition: 'all 0.5s ease'

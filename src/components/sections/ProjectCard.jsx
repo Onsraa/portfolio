@@ -1,4 +1,6 @@
 import {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
+import {Award, Calendar, Code2} from 'lucide-react';
 import {useTheme} from '@context/ThemeContext';
 import {useLanguage} from '@context/LanguageContext';
 import {TranslationBadge} from '@components/ui';
@@ -6,13 +8,16 @@ import {TranslationBadge} from '@components/ui';
 export default function ProjectCard({project}) {
     const [hovered, setHovered] = useState(false);
     const {colors} = useTheme();
-    const {getLocalized} = useLanguage();
+    const {t, getLocalized} = useLanguage();
+    const navigate = useNavigate();
+    const icon = {size: 13, strokeWidth: 1.8, 'aria-hidden': true};
 
     const title = getLocalized(project, 'title');
     const description = getLocalized(project, 'description');
     const isFeatured = project.featured;
 
     return (<a
+        className="project-card"
         href={project.link || '#'}
         target="_blank"
         rel="noopener noreferrer"
@@ -69,13 +74,25 @@ export default function ProjectCard({project}) {
                     <TranslationBadge show={title.needsTranslation}/>
                 </h3>
             </div>
-            <span style={{color: colors.textDarker, fontSize: '13px'}}>
-              {project.year}
+            <span style={{color: colors.textDarker, fontSize: '13px', display: 'inline-flex', alignItems: 'center', gap: '6px'}}>
+              <Calendar {...icon}/>{project.year}
             </span>
         </div>
 
+        {project.article && (
+            <span
+                role="link"
+                tabIndex={0}
+                onClick={(e) => { e.preventDefault(); e.stopPropagation(); navigate(`/articles/${project.article.slug}`); }}
+                onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); navigate(`/articles/${project.article.slug}`); } }}
+                style={{display: 'inline-flex', alignItems: 'center', gap: '8px', margin: '0 0 12px 0', padding: '3px 10px', fontSize: '12px', color: colors.text, border: `1px solid ${colors.accent}`, cursor: 'pointer'}}
+            >
+                <Award {...icon} size={14}/>{t.award}
+            </span>
+        )}
+
         <p style={{
-            margin: '0 0 16px 0', color: colors.textDark, fontSize: '14px', lineHeight: 1.7, maxWidth: '640px'
+            margin: '0 0 16px 0', color: colors.textSecondary, fontSize: '14px', lineHeight: 1.7, maxWidth: '640px'
         }}>
             {description.value}
             <TranslationBadge show={description.needsTranslation}/>
@@ -112,7 +129,7 @@ export default function ProjectCard({project}) {
                     onMouseEnter={(e) => e.target.style.color = colors.accent}
                     onMouseLeave={(e) => e.target.style.color = colors.textMuted}
                 >
-                    <span style={{color: colors.textDarkest}}>→</span> github
+                    <span style={{display: 'inline-flex', alignItems: 'center', gap: '6px', pointerEvents: 'none'}}><Code2 {...icon}/>github</span>
                 </span>
             )}
         </div>
