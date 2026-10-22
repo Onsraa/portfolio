@@ -17,8 +17,7 @@ export default function Footer() {
         <footer style={{
             maxWidth: '900px',
             margin: '0 auto',
-            padding: '40px 24px 80px',
-            borderTop: `1px solid ${colors.border}`,
+            padding: '72px 24px 80px',
             display: 'flex',
             flexWrap: 'wrap',
             justifyContent: 'space-between',

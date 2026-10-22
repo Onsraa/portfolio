@@ -19,7 +19,7 @@ export default function BlogPage() {
             transition: 'all 0.5s ease'
         }}>
             <SectionHeader
-                title={t.articles}
+                title={t.dirArticles}
                 count={`${articles.length} ${t.entries}`}
             />
 

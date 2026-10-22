@@ -3,7 +3,7 @@ import {MapPin} from 'lucide-react';
 import {useTheme} from '@context/ThemeContext';
 import {useLanguage} from '@context/LanguageContext';
 import {TranslationBadge} from '@components/ui';
-import {Disclosure, DetailsToggle} from '@components/ui/Disclosure';
+import {Disclosure} from '@components/ui/Disclosure';
 import {monthYear} from '../../data/dates.js';
 
 // contract type badge: label key and colours, as the card already used for apprenticeship and internship
@@ -106,26 +106,27 @@ export default function ExperienceCard({experience}) {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             style={{
-                padding: '28px 0',
-                borderBottom: `1px solid ${colors.borderLight}`,
-                transition: 'all 0.2s ease',
+                padding: '22px 0',
+                transition: 'background 0.2s ease, box-shadow 0.2s ease',
                 background: hovered ? `linear-gradient(90deg, ${colors.bgHover} 0%, transparent 100%)` : 'transparent',
+                // the highlight starts a little left of the text, without moving the text or the separators
+                boxShadow: hovered ? `-16px 0 0 0 ${colors.bgHover}` : 'none',
                 cursor: hasMore ? 'pointer' : 'default',
             }}
         >
             {/* when the role is too long to share the line, the dates wrap below it, still on the right */}
             <div style={{display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', gap: '6px 16px'}}>
                 <h3 style={{flex: '1 1 260px', margin: 0, fontSize: '18px', fontWeight: 500, color: hovered ? colors.accent : colors.text, transition: 'color 0.15s ease', lineHeight: 1.35}}>
-                    {role.value}
+                    {/* the role is the toggle for keyboards and screen readers; a mouse can click anywhere on the row */}
+                    {hasMore
+                        ? <button type="button" aria-expanded={open} aria-controls={detailsId} onClick={toggle}
+                                  style={{background: 'none', border: 0, padding: 0, font: 'inherit', color: 'inherit', textAlign: 'left', cursor: 'pointer'}}>
+                            {role.value}
+                          </button>
+                        : role.value}
                     <TranslationBadge show={role.needsTranslation}/>
                 </h3>
-                <div style={{marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: '12px'}}>
-                    <span style={{color: colors.textDarker, fontSize: '13px', whiteSpace: 'nowrap'}}>{dates}</span>
-                    {hasMore
-                        ? <DetailsToggle open={open} onToggle={toggle} controls={detailsId}/>
-                        // same width kept empty, so every row's dates end at the same place
-                        : <span aria-hidden="true" style={{visibility: 'hidden'}}><DetailsToggle open={false} onToggle={() => {}}/></span>}
-                </div>
+                <span style={{marginLeft: 'auto', color: colors.textDarker, fontSize: '13px', whiteSpace: 'nowrap'}}>{dates}</span>
             </div>
             <div style={{display: 'flex', alignItems: 'baseline', gap: '10px', marginTop: '6px', flexWrap: 'wrap'}}>
                 <span style={{color: colors.textDarker}}>@</span>

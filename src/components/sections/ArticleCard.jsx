@@ -25,14 +25,13 @@ export default function ArticleCard({ article }) {
             to={`/articles/${article.slug}`}
             style={{
                 display: 'block',
-                padding: '24px 0',
-                borderBottom: `1px solid ${colors.borderLight}`,
+                padding: '22px 0',
                 textDecoration: 'none',
                 color: 'inherit',
-                transition: 'all 0.15s ease',
-                background: hovered ? colors.bgHover : 'transparent',
-                marginLeft: hovered ? '8px' : '0',
-                paddingLeft: hovered ? '16px' : '0',
+                transition: 'background 0.2s ease, box-shadow 0.2s ease',
+                // the highlight reaches a little left of the row and moves nothing
+                background: hovered ? `linear-gradient(90deg, ${colors.bgHover} 0%, transparent 100%)` : 'transparent',
+                boxShadow: hovered ? `-16px 0 0 0 ${colors.bgHover}` : 'none',
             }}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}

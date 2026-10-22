@@ -295,7 +295,6 @@ export default function ArticlePage() {
 
             <footer style={{
                 paddingTop: '32px',
-                borderTop: `1px solid ${colors.border}`,
             }}>
                 <Link
                     to="/articles"

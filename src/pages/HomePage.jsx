@@ -34,7 +34,7 @@ export default function HomePage({ section = 'experience' }) {
             {section === 'experience' && (
                 <section>
                     <SectionHeader
-                        title={t.experience}
+                        title={t.dirExperience}
                         count={`${experiences.length} ${t.posts} · ${yearsOfExperience} ${t.years}`}
                     />
                     <div style={{ marginTop: '8px' }}>
@@ -46,10 +46,10 @@ export default function HomePage({ section = 'experience' }) {
             )}
 
             {section === 'projects' && [
-                [t.selectedProjects, projects.filter((p) => p.selected)],
-                [t.otherProjects, projects.filter((p) => !p.selected)],
+                [t.dirSelected, projects.filter((p) => p.selected)],
+                [t.dirOther, projects.filter((p) => !p.selected)],
             ].map(([title, list], i) => (
-                <section key={title} style={{ marginTop: i ? '64px' : 0 }}>
+                <section key={title} style={{ marginTop: i ? '72px' : 0 }}>
                     <SectionHeader
                         title={title}
                         count={`${list.length} ${t.entries}`}

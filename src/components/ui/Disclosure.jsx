@@ -1,37 +1,42 @@
-import { ChevronDown } from 'lucide-react';
-import { useTheme } from '@context/ThemeContext';
-import { useLanguage } from '@context/LanguageContext';
+import { useLayoutEffect, useRef } from 'react';
+import gsap from 'gsap';
 
-// A region that opens and closes with a height transition (grid rows 0fr → 1fr, see .disclosure in index.css).
-export function Disclosure({ id, open, children }) {
+const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+// while closed, a partly visible line fades out at its end instead of being cut
+const FADE = 'linear-gradient(90deg, #000 70%, transparent)';
+
+// A region that opens and closes with a GSAP height tween.
+// collapsed: the height in px it keeps while closed (0 hides it, and makes it inert so hidden links can't be reached).
+// Its height is never set from React props, so re-renders (hover, theme) can't make it jump mid-tween.
+export function Disclosure({ id, open, collapsed = 0, children }) {
+    const ref = useRef(null);
+    const mounted = useRef(false);
+
+    useLayoutEffect(() => {
+        const el = ref.current;
+        const fade = collapsed > 0 && !open ? FADE : 'none';
+        if (!mounted.current) {
+            mounted.current = true;
+            gsap.set(el, { height: open ? 'auto' : collapsed, opacity: open || collapsed ? 1 : 0, maskImage: fade, webkitMaskImage: fade });
+            return;
+        }
+        if (open) gsap.set(el, { maskImage: 'none', webkitMaskImage: 'none' });
+        // overwrite: a click mid-tween turns the motion around from where it is
+        gsap.to(el, {
+            height: open ? 'auto' : collapsed,
+            opacity: open || collapsed ? 1 : 0,
+            duration: reducedMotion() ? 0 : open ? 0.5 : 0.4,
+            ease: open ? 'power3.out' : 'power2.inOut',
+            overwrite: true,
+            onComplete: () => { if (!open) gsap.set(el, { maskImage: fade, webkitMaskImage: fade }); },
+        });
+    }, [open, collapsed]);
+
+    const hidden = !open && collapsed === 0;
     return (
-        // inert while closed: hidden links can't be tabbed to or read out (React 18 passes it as a plain attribute)
-        <div id={id} className="disclosure" data-open={open} aria-hidden={!open} inert={open ? undefined : ''}>
-            <div>{children}</div>
+        // React 18 passes inert as a plain attribute
+        <div id={id} ref={ref} style={{ overflow: 'hidden' }} aria-hidden={hidden || undefined} inert={hidden ? '' : undefined}>
+            {children}
         </div>
-    );
-}
-
-// The small "details ⌄" button that controls a Disclosure.
-export function DetailsToggle({ open, onToggle, controls }) {
-    const { colors } = useTheme();
-    const { t } = useLanguage();
-    return (
-        <button
-            type="button"
-            className="details-toggle"
-            aria-expanded={open}
-            aria-controls={controls}
-            aria-label={open ? t.hideDetails : t.showDetails}
-            onClick={onToggle}
-            style={{
-                display: 'inline-flex', alignItems: 'center', gap: '6px', flexShrink: 0,
-                background: open ? colors.bgHover : 'none', border: `1px solid ${colors.borderLight}`,
-                padding: '2px 8px', color: open ? colors.text : colors.textMuted,
-                font: 'inherit', fontSize: '11px', cursor: 'pointer',
-            }}
-        >
-            {t.details}<ChevronDown size={13} strokeWidth={1.8} aria-hidden="true" />
-        </button>
     );
 }

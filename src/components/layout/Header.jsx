@@ -14,7 +14,6 @@ export default function Header({ loaded }) {
             padding: '80px 24px 60px',
             maxWidth: '900px',
             margin: '0 auto',
-            borderBottom: `1px solid ${colors.border}`
         }}>
             <div style={{
                 display: 'flex',

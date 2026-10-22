@@ -8,6 +8,9 @@
 
 html {
   scroll-behavior: smooth;
+  /* always show the (custom, 8px) scrollbar so short pages keep the same width and nothing jumps between tabs;
+     scrollbar-gutter can't do it here: macOS overlay scrollbars reserve no gutter */
+  overflow-y: scroll;
 }
 
 body {
@@ -42,27 +45,10 @@ body {
 }
 
 /* Animations */
-/* expandable details on experience and project rows */
-.disclosure {
-  display: grid;
-  grid-template-rows: 0fr;
-  opacity: 0;
-  transition: grid-template-rows 0.35s ease, opacity 0.25s ease;
-}
-.disclosure[data-open="true"] { grid-template-rows: 1fr; opacity: 1; }
-.disclosure > div { overflow: hidden; min-height: 0; }
-.details-toggle svg { transition: transform 0.25s ease; }
-.details-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+/* the light/dark icon turns half a turn when the theme changes */
+.theme-icon { display: block; transition: transform 0.45s ease; }
 @media (prefers-reduced-motion: reduce) {
-  .disclosure, .details-toggle svg { transition: none; }
-}
-
-/* a project description shown on one line while its row is closed */
-.clamp-1 {
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  .theme-icon { transition: none; }
 }
 
 @keyframes blink {

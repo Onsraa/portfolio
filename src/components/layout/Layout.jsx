@@ -25,20 +25,15 @@ export default function Layout() {
     const activeTab = getActiveTab();
 
     const navButtonStyle = (isActive) => ({
-        background: 'none',
-        border: 'none',
-        padding: 'clamp(12px, 3vw, 20px) clamp(10px, 3vw, 24px)',
+        padding: '6px 0',
         color: isActive ? colors.accent : colors.textDarker,
-        fontSize: 'clamp(11px, 2.5vw, 13px)',
+        fontSize: '14px',
         fontFamily: 'inherit',
-        textTransform: 'uppercase',
-        letterSpacing: 'clamp(0.03em, 1vw, 0.1em)',
-        borderBottom: isActive ? `1px solid ${colors.accent}` : '1px solid transparent',
-        marginBottom: '-1px',
-        transition: 'all 0.15s ease',
-        cursor: 'pointer',
+        transition: 'color 0.15s ease',
         textDecoration: 'none',
     });
+    // a terminal caret marks the open tab; it keeps its width on the others so nothing moves when switching
+    const caret = (isActive) => <span aria-hidden="true" style={{ color: colors.accent, marginRight: '8px', visibility: isActive ? 'visible' : 'hidden' }}>&gt;</span>;
 
     return (
         <div style={{
@@ -54,20 +49,20 @@ export default function Layout() {
             <nav role="tablist" style={{
                 maxWidth: '900px',
                 margin: '0 auto',
-                padding: '0 clamp(8px, 3vw, 24px)',
-                borderBottom: `1px solid ${colors.border}`,
+                padding: '0 24px',
                 display: 'flex',
-                gap: '0'
+                flexWrap: 'wrap',
+                gap: '0 clamp(20px, 5vw, 36px)'
             }}>
                 <Link to="/" role="tab" aria-selected={activeTab === 'experience'} style={navButtonStyle(activeTab === 'experience')}>
-                    {t.experience}
+                    {caret(activeTab === 'experience')}{t.experience.toLowerCase()}
                 </Link>
                 <Link to="/projects" role="tab" aria-selected={activeTab === 'projects'} style={navButtonStyle(activeTab === 'projects')}>
-                    {t.projects}
+                    {caret(activeTab === 'projects')}{t.projects.toLowerCase()}
                 </Link>
                 {data.articles.length > 0 && (
                     <Link to="/articles" role="tab" aria-selected={activeTab === 'articles'} style={navButtonStyle(activeTab === 'articles')}>
-                        {t.articles}
+                        {caret(activeTab === 'articles')}{t.articles.toLowerCase()}
                     </Link>
                 )}
             </nav>
